@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //
         let footer = UIView(frame: CGRect(x: 0, y: view.frame.size.height - 150, width: view.frame.size.width, height: 40))
         view.addSubview(footer)
         let size = (view.frame.size.width-80)/3
