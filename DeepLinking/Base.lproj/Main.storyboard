@@ -25,16 +25,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pass a message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RpW-hC-FVI">
+                                <rect key="frame" x="30" y="341.5" width="354" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="i5v-AR-2kp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RpW-hC-FVI" secondAttribute="trailing" constant="30" id="11W-Qx-BAi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UZR-87-nuI" secondAttribute="trailing" constant="10" id="8Me-va-tdw"/>
+                            <constraint firstItem="RpW-hC-FVI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="WDi-3l-zTd"/>
                             <constraint firstItem="UZR-87-nuI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b9Y-yx-sqk"/>
                             <constraint firstItem="UZR-87-nuI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="mf4-DX-hfl"/>
                             <constraint firstItem="UZR-87-nuI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tN2-Ug-hXh"/>
+                            <constraint firstItem="UZR-87-nuI" firstAttribute="top" secondItem="RpW-hC-FVI" secondAttribute="bottom" constant="60" id="vq9-xj-tUI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passMessageText" destination="RpW-hC-FVI" id="xch-N3-AuV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

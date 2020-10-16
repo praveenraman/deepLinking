@@ -8,7 +8,9 @@ import StoreKit
 import UIKit
 
 class ViewController: UIViewController {
-        
+    let application = UIApplication.shared
+    @IBOutlet weak var passMessageText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,12 +32,12 @@ class ViewController: UIViewController {
         let tag = sender.tag
         if tag == 1{
             // open easemytrip app
-            guard let url =  URL(string: "ms-word://") else {
+            guard let url =  URL(string: "SQLiteExample://") else {
                 return
             }
-            if UIApplication.shared.canOpenURL(url)
+            if application.canOpenURL(url)
             {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                application.open(url, options: [:], completionHandler: nil)
                 
             }else{
                 let vc = SKStoreProductViewController()
@@ -45,12 +47,14 @@ class ViewController: UIViewController {
 
         }else if tag == 2{
             // open BEC app
-            guard let url =  URL(string: "ms-word://") else {
+            let message = passMessageText.text?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+            
+            guard let url =  URL(string: "SQLiteExample://secretPage?message=\(message ?? "")") else {
                 return
             }
-            if UIApplication.shared.canOpenURL(url)
+            if application.canOpenURL(url)
             {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                application.open(url, options: [:], completionHandler: nil)
                 
             }else{
                 let vc = SKStoreProductViewController()
@@ -59,12 +63,12 @@ class ViewController: UIViewController {
             }
         }else if tag == 3{
             // open easemytrip app
-            guard let url =  URL(string: "ms-word://") else {
+            guard let url =  URL(string: "SQLiteExample://") else {
                 return
             }
-            if UIApplication.shared.canOpenURL(url)
+            if application.canOpenURL(url)
             {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                application.open(url, options: [:], completionHandler: nil)
                 
             }else{
                 let vc = SKStoreProductViewController()
